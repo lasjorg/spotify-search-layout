@@ -1,0 +1,295 @@
+:root {
+  --dark-gray: #181818;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  margin: 0;
+  background: #0e0e0e;
+  color: white;
+  display: grid;
+  height: 100vh;
+}
+
+hr {
+  opacity: 0.1;
+  margin-top: 4px;
+}
+
+img {
+  display: block;
+}
+
+svg {
+  height: 40px;
+  width: 40px;
+}
+
+.bg-dark {
+  background: var(--dark-gray);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header and nav */
+
+.header {
+  position: fixed;
+  top: 0;
+  /* left: 0; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header svg {
+  stroke: white;
+  fill: none;
+}
+
+.search {
+  position: relative;
+}
+
+.input-search {
+  display: block;
+  border-radius: 10px;
+  padding: 4px;
+  border: none;
+  outline: none;
+  /* width: 90%; */
+}
+
+.search > svg {
+  position: absolute;
+  stroke: black;
+  fill: none;
+  height: 15px;
+  width: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search > .icon-search {
+  left: 4px;
+}
+
+.search > .icon-close {
+  right: 13%;
+}
+
+.navbar {
+  margin-left: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.btn-upgrade {
+  border: 1px solid white;
+  border-radius: 10px;
+  height: 25px;
+  width: 100px;
+  background: var(--dark-gray);
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Top search results */
+
+.search-top-featured {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  padding: 90px 30px 20px 30px;
+  background-image: linear-gradient(to bottom, #333333, transparent);
+  height: 60vh;
+}
+
+.search-top-header {
+  margin-bottom: 15px;
+}
+
+.featured {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.cover-featured {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+  width: 100%;
+}
+
+.search-featured img {
+  margin-bottom: 20px;
+}
+
+/* Search result grid */
+
+.search-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  gap: 20px;
+  margin: auto;
+  padding: 30px;
+}
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category-header,
+.toggle-more {
+  margin: 0;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.category-header:hover,
+.toggle-more:hover {
+  text-decoration: underline;
+}
+
+.toggle-more {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  opacity: 0.8;
+  font-size: 0.85rem;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.covers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.cover {
+  display: flex;
+  width: 50%;
+  min-width: 200px;
+  align-items: center;
+  margin-bottom: 40px;
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+}
+
+.cover:hover {
+  background: #252525;
+}
+
+/* .cover:nth-child(n + 3) {
+  margin-top: 40px;
+} */
+
+/* .cover:nth-child(even) {
+  padding-left: 50px;
+} */
+
+/* .cover:nth-child(odd) {
+  padding-right: 50px;
+}
+
+@media (max-width: 859px) {
+  .cover:nth-child(even) {
+    padding-left: 0;
+  }
+} */
+
+.cover-overlay {
+  position: relative;
+  margin-right: 20px;
+}
+
+.cover-overlay:hover .play-button {
+  opacity: 1;
+}
+
+.cover-overlay .play-button {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 8px 8px 8px 11px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  z-index: 10;
+}
+
+.cover-overlay .play-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.cover-overlay .play-button:hover + img {
+  filter: brightness(70%);
+}
+
+.cover-overlay .play-button--large {
+  width: 60px;
+  height: 60px;
+}
+
+.cover-overlay > img:hover {
+  filter: brightness(70%);
+}
+
+.cover-info {
+  width: 100%;
+  max-width: calc(100% - 110px);
+}
+
+.cover-info > .album,
+.cover-info > .artist {
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+.cover-info .artist {
+  opacity: 0.8;
+}
+
+.artists img,
+.search-top img {
+  border-radius: 50%;
+}
+
+@media (max-width: 879px) {
+  .search-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 476px) {
+  .cover {
+    width: 100%;
+  }
+}

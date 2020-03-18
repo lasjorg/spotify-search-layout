@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Spotify</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <svg class="chevron-left" viewBox="0 0 24 24">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+        <svg viewBox="0 0 24 24">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+
+        <div class="search">
+          <svg class="icon-search" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" class="input-search" />
+          <svg
+            class="icon-close"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </div>
+
+        <nav class="navbar">
+          <button class="btn-upgrade">Upgrade</button>
+          <svg viewBox="0 0 24 24">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span class="user-name">LJ</span>
+          <div class="menu">
+            <svg viewBox="0 0 24 24">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+            <div class="dropdown-menu">
+              <a href="#">Private Session</a>
+              <a href="#">Account</a>
+              <a href="#">Upgrade you account</a>
+              <a href="#">Settings</a>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="search-top-featured">
+        <div class="search-top">
+          <h3 class="search-top-header">Top Result</h3>
+          <a href="#" class="cover">
+            <div class="cover-overlay">
+              <svg
+                class="play-button play-button--large"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              <img src="https://picsum.photos/180/180/?random=1" alt="" />
+            </div>
+          </a>
+          <h4 class="artist-name">Artist Name</h4>
+          <p class="artist">artist</p>
+        </div>
+        <div class="search-featured">
+          <h3 class="search-top-header">Featuring Band Name</h3>
+          <div class="featured">
+            <a href="#" class="cover-featured">
+              <div class="cover-overlay">
+                <svg
+                  class="play-button play-button--large"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <img src="https://picsum.photos/180/180/?random=1" alt="" />
+              </div>
+              <div class="cover-info">
+                <h4 class="album">Album title</h4>
+                <p class="artist">Artist name</p>
+              </div>
+            </a>
+            <a href="#" class="cover-featured">
+              <div class="cover-overlay">
+                <svg
+                  class="play-button play-button--large"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <img src="https://picsum.photos/180/180/?random=1" alt="" />
+              </div>
+              <div class="cover-info">
+                <h4 class="album">Album title</h4>
+                <p class="artist">Artist name</p>
+              </div>
+            </a>
+            <a href="#" class="cover-featured">
+              <div class="cover-overlay">
+                <svg
+                  class="play-button play-button--large"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <img src="https://picsum.photos/180/180/?random=1" alt="" />
+              </div>
+              <div class="cover-info">
+                <h4 class="album">Album title</h4>
+                <p class="artist">Artist name</p>
+              </div>
+            </a>
+            <a href="#" class="cover-featured">
+              <div class="cover-overlay">
+                <svg
+                  class="play-button play-button--large"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <img src="https://picsum.photos/180/180/?random=1" alt="" />
+              </div>
+              <div class="cover-info">
+                <h4 class="album">Album title</h4>
+                <p class="artist">Artist name</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container search-grid bg-dark">
+        <section class="search-category songs">
+          <div class="category">
+            <a href="#" class="category-header">Songs</a>
+            <a href="#" class="toggle-more">see all</a>
+          </div>
+
+          <hr />
+
+          <div class="covers">
+            <a href="#" class="cover">
+              <div class="cover-overlay">
+                <svg
+                  class="play-button"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <img src="https://picsum.photos/90/90/?random=1" alt="" />
+              </div>
+              <div class="cover-info">
+                <h4 class="album">Album title</h4>
+                <p class="artist">Artist name</p>
+              </div>
+            </a>
+
+            <a href="#" class="cover">
+              <div class="cover-overlay">
+                <svg
+                  class="play-button"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <img src="https://picsum.photos/90/90/?random=2" alt="" />
+              </div>
+              <div class="cover-info">
+                <h4 class="album">Album title too long</h4>
+                <p class="artist">Artist name too long</p>
+              </div>
+            </a>
+
+            <a href="#" class="cover">
+              <div class="cover-overlay">
+                <svg
+                  class="play-button"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <img src="https://picsum.photos/90/90/?random=3" alt="" />
+              </div>
+              <div class="cover-info">
+                <h4 class="album">Album</h4>
+                <p class="artist">Artist</p>
+              </div>
+            </a>
+
+            <a href="#" class="cover">
+              <div class="cover-overlay">
+                <svg
+                  class="play-button"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <img src="https://picsum.photos/90/90/?random=4" alt="" />
+              </div>
+              <div class="cover-info">
+                <h4 class="album">Album</h4>
+                <p class="artist">Artist</p>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <section class="search-category artists">
+          <div class="category">
+            <a href="#" class="category-header">Artists</a>
+            <a href="#" class="toggle-more">see all</a>
+          </div>
+          <hr />
+          <div class="covers">
+            <a href="#" class="cover">
+              <div class="cover-overlay">
+                <svg
+                  class="play-button"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <img src="https://picsum.photos/90/90/?random=5" alt="" />
+              </div>
+              <div class="cover-info">
+                <h4 class="album">Album</h4>
+                <p class="artist">Artist</p>
+              </div>
+            </a>
+            <a href="#" class="cover">
+              <div class="cover-overlay">
+                <svg
+                  class="play-button"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <img src="https://picsum.photos/90/90/?random=6" alt="" />
+              </div>
+              <div class="cover-info">
+                <h4 class="album">Album</h4>
+                <p class="artist">Artist</p>
+              </div>
+            </a>
+            <a href="#" class="cover">
+              <div class="cover-overlay">
+                <svg
+                  class="play-button"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <img src="https://picsum.photos/90/90/?random=7" alt="" />
+              </div>
+              <div class="cover-info">
+                <h4 class="album">Album</h4>
+                <p class="artist">Artist</p>
+              </div>
+            </a>
+            <a href="#" class="cover">
+              <div class="cover-overlay">
+                <svg
+                  class="play-button"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <img src="https://picsum.photos/90/90/?random=8" alt="" />
+              </div>
+              <div class="cover-info">
+                <h4 class="album">Album</h4>
+                <p class="artist">Artist</p>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <section class="search-category albums">
+          <div class="category">
+            <a href="#" class="category-header">Albums</a>
+            <a href="#" class="toggle-more">see all</a>
+          </div>
+          <hr />
+          <div class="covers">
+            <a href="#" class="cover">
+              <div class="cover-overlay">
+                <svg
+                  class="play-button"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <img src="https://picsum.photos/90/90/?random=9" alt="" />
+              </div>
+              <div class="cover-info">
+                <h4 class="album">Album</h4>
+                <p class="artist">Artist</p>
+              </div>
+            </a>
+            <a href="#" class="cover">
+              <div class="cover-overlay">
+                <svg
+                  class="play-button"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <img src="https://picsum.photos/90/90/?random=10" alt="" />
+              </div>
+              <div class="cover-info">
+                <h4 class="album">Album</h4>
+                <p class="artist">Artist</p>
+              </div>
+            </a>
+            <a href="#" class="cover">
+              <div class="cover-overlay">
+                <svg
+                  class="play-button"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <img src="https://picsum.photos/90/90/?random=11" alt="" />
+              </div>
+              <div class="cover-info">
+                <h4 class="album">Album</h4>
+                <p class="artist">Artist</p>
+              </div>
+            </a>
+            <a href="#" class="cover">
+              <div class="cover-overlay">
+                <svg
+                  class="play-button"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <img src="https://picsum.photos/90/90/?random=12" alt="" />
+              </div>
+              <div class="cover-info">
+                <h4 class="album">Album</h4>
+                <p class="artist">Artist</p>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <section class="search-category playlists">
+          <div class="category">
+            <a href="#" class="category-header">Playlists</a>
+            <a href="#" class="toggle-more">see all</a>
+          </div>
+          <hr />
+          <div class="covers">
+            <a href="#" class="cover">
+              <div class="cover-overlay">
+                <svg
+                  class="play-button"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <img src="https://picsum.photos/90/90/?random=13" alt="" />
+              </div>
+              <div class="cover-info">
+                <h4 class="album">Album</h4>
+                <p class="artist">Artist</p>
+              </div>
+            </a>
+            <a href="#" class="cover">
+              <div class="cover-overlay">
+                <svg
+                  class="play-button"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <img src="https://picsum.photos/90/90/?random=14" alt="" />
+              </div>
+              <div class="cover-info">
+                <h4 class="album">Album</h4>
+                <p class="artist">Artist</p>
+              </div>
+            </a>
+            <a href="#" class="cover">
+              <div class="cover-overlay">
+                <svg
+                  class="play-button"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <img src="https://picsum.photos/90/90/?random=15" alt="" />
+              </div>
+              <div class="cover-info">
+                <h4 class="album">Album</h4>
+                <p class="artist">Artist</p>
+              </div>
+            </a>
+            <a href="#" class="cover">
+              <div class="cover-overlay">
+                <svg
+                  class="play-button"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <img src="https://picsum.photos/90/90/?random=16" alt="" />
+              </div>
+              <div class="cover-info">
+                <h4 class="album">Album</h4>
+                <p class="artist">Artist</p>
+              </div>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
