@@ -45,13 +45,20 @@ svg {
 /* Header and nav */
 
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
   display: flex;
   align-items: center;
   margin-bottom: 50px;
+  padding: 5px 0 20px 0;
   z-index: 10;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.has-scroll {
+  background-image: linear-gradient(to bottom, black 30%, transparent 100%);
 }
 
 .header svg {
@@ -133,6 +140,10 @@ svg {
   padding: 8px 0;
 }
 
+.dropdown-menu.hide {
+  display: none;
+}
+
 .btn-upgrade {
   border: 1px solid white;
   border-radius: 10px;
@@ -147,7 +158,7 @@ svg {
 /* Top search results */
 
 .search-top-featured {
-  padding: 5px 30px 20px 30px;
+  padding: 120px 30px 60px 30px;
   background-image: linear-gradient(to bottom, #333333, transparent);
   min-height: 60vh;
 }
