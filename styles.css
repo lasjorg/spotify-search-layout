@@ -2,7 +2,9 @@
   --dark-gray: #181818;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
 }
@@ -43,30 +45,33 @@ svg {
 /* Header and nav */
 
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
-  /* left: 0; */
   width: 100%;
   display: flex;
   align-items: center;
+  margin-bottom: 50px;
+  z-index: 10;
 }
 
 .header svg {
   stroke: white;
   fill: none;
+  cursor: pointer;
 }
 
 .search {
   position: relative;
+  margin: 0 20px;
 }
 
 .input-search {
   display: block;
   border-radius: 10px;
-  padding: 4px;
+  /* padding: 4px; */
+  padding: 4px 4px 4px 25px;
   border: none;
   outline: none;
-  /* width: 90%; */
 }
 
 .search > svg {
@@ -84,7 +89,7 @@ svg {
 }
 
 .search > .icon-close {
-  right: 13%;
+  right: 6%;
 }
 
 .navbar {
@@ -92,6 +97,40 @@ svg {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  position: relative;
+}
+
+.navbar > .user {
+  display: flex;
+  align-items: center;
+}
+
+.user-name {
+  margin-left: 5px;
+}
+
+.navbar > * {
+  margin: 0 20px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: rgb(60, 92, 122);
+  text-align: center;
+  padding: 10px;
+}
+
+.dropdown-menu > a {
+  display: block;
+  color: white;
+  padding: 8px 0;
 }
 
 .btn-upgrade {
@@ -108,11 +147,20 @@ svg {
 /* Top search results */
 
 .search-top-featured {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  padding: 90px 30px 20px 30px;
+  padding: 5px 30px 20px 30px;
   background-image: linear-gradient(to bottom, #333333, transparent);
-  height: 60vh;
+  min-height: 60vh;
+}
+
+.search-results {
+  display: flex;
+}
+
+.search-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 140px;
 }
 
 .search-top-header {
@@ -135,8 +183,8 @@ svg {
   width: 100%;
 }
 
-.search-featured img {
-  margin-bottom: 20px;
+.search-featured {
+  flex: 1;
 }
 
 /* Search result grid */
@@ -189,6 +237,7 @@ svg {
   display: flex;
   width: 50%;
   min-width: 200px;
+  justify-content: center;
   align-items: center;
   margin-bottom: 40px;
   color: inherit;
@@ -264,6 +313,10 @@ svg {
 .cover-info {
   width: 100%;
   max-width: calc(100% - 110px);
+}
+
+.cover-info--featured {
+  margin-top: 2rem;
 }
 
 .cover-info > .album,
