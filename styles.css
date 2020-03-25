@@ -169,7 +169,6 @@ svg {
 
 .featured {
   display: flex;
-  /* justify-content: space-evenly; */
   align-items: center;
 }
 
@@ -224,6 +223,8 @@ svg {
   cursor: pointer;
 }
 
+/* Album covers */
+
 .covers {
   display: flex;
   flex-wrap: wrap;
@@ -246,24 +247,6 @@ svg {
 .cover:hover {
   background: #252525;
 }
-
-/* .cover:nth-child(n + 3) {
-  margin-top: 40px;
-} */
-
-/* .cover:nth-child(even) {
-  padding-left: 50px;
-} */
-
-/* .cover:nth-child(odd) {
-  padding-right: 50px;
-}
-
-@media (max-width: 859px) {
-  .cover:nth-child(even) {
-    padding-left: 0;
-  }
-} */
 
 .cover-overlay {
   position: relative;
@@ -336,6 +319,8 @@ svg {
 .search-top img {
   border-radius: 50%;
 }
+
+/* MQ */
 
 @media (max-width: 1290px) {
   .featured {
