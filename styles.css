@@ -30,7 +30,7 @@ img {
 
 svg {
   height: 40px;
-  width: 40px;
+  min-width: 40px;
 }
 
 .bg-dark {
@@ -51,14 +51,21 @@ svg {
   display: flex;
   align-items: center;
   margin-bottom: 50px;
-  padding: 5px 0 20px 0;
-  z-index: 10;
+  padding: 5px 0 10px 0;
+  /* 10 higher than the cover play button
+     fix for nav menu
+   */
+  z-index: 20;
   max-width: 1400px;
   margin: 0 auto;
 }
 
 .has-scroll {
   background-image: linear-gradient(to bottom, black 30%, transparent 100%);
+}
+
+.has-scroll-to-target {
+  background: black;
 }
 
 .header svg {
@@ -75,7 +82,6 @@ svg {
 .input-search {
   display: block;
   border-radius: 10px;
-  /* padding: 4px; */
   padding: 4px 4px 4px 25px;
   border: none;
   outline: none;
@@ -128,16 +134,36 @@ svg {
 .dropdown-menu {
   position: absolute;
   top: 40px;
-  right: 0;
-  background: rgb(60, 92, 122);
-  text-align: center;
-  padding: 10px;
+  right: 20px;
+  background: #272727;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  width: 250px;
+}
+
+.dropdown-menu::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #272727;
+  position: absolute;
+  top: -10px;
+  right: 10px;
 }
 
 .dropdown-menu > a {
   display: block;
+  color: rgb(224, 224, 224);
+  font-size: 1rem;
+  padding: 8px 20px 8px 40px;
+  text-decoration: none;
+  cursor: default;
+}
+
+.dropdown-menu > a:hover {
   color: white;
-  padding: 8px 0;
+  background: #3f3f3f;
 }
 
 .dropdown-menu.hide {
