@@ -317,6 +317,7 @@ svg {
 .cover-overlay .play-button:hover {
   background: rgba(0, 0, 0, 0.8);
   transform: translate(-50%, -50%) scale(1.1);
+  cursor: default;
 }
 
 .cover-overlay .play-button:hover + img {
