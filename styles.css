@@ -181,6 +181,13 @@ svg {
   text-transform: uppercase;
 }
 
+/* Hidden scroll trigger element */
+.scroll-trigger-element {
+  position: absolute;
+  top: 40px;
+  min-height: 10px;
+}
+
 /* Top search results */
 
 .search-top-featured {
