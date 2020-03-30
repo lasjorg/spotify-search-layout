@@ -29,8 +29,7 @@ img {
 }
 
 svg {
-  height: 40px;
-  min-width: 40px;
+  height: 30px;
 }
 
 .bg-dark {
@@ -51,7 +50,7 @@ svg {
   display: flex;
   align-items: center;
   margin-bottom: 50px;
-  padding: 5px 0 10px 0;
+  padding: 10px 0 10px 0;
   /* 10 higher than the cover play button
      fix for nav menu
    */
@@ -81,7 +80,7 @@ svg {
 
 .search {
   position: relative;
-  margin: 0 20px;
+  margin: 0 10px;
 }
 
 .input-search {
@@ -97,17 +96,17 @@ svg {
   position: absolute;
   stroke: black;
   fill: none;
-  height: 18px;
+  height: 16px;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .search > .icon-search {
-  left: -8px;
+  left: 2px;
 }
 
 .search > .icon-close {
-  right: 18%;
+  right: 22%;
   opacity: 0;
   visibility: hidden;
 }
@@ -125,17 +124,43 @@ svg {
   position: relative;
 }
 
+.btn-upgrade {
+  border: 1px solid white;
+  border-radius: 10px;
+  width: 112px;
+  background: #272727;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+  line-height: 1.8;
+}
+
 .navbar > .user {
   display: flex;
   align-items: center;
 }
 
-.user-name {
-  margin-left: 5px;
+.user > .user-icon {
+  border-radius: 50%;
+  border: 1px solid white;
+  height: 22px;
+  width: 22px;
+  stroke-width: 2px;
+}
+
+.user > .user-icon:hover + .user-name {
+  text-decoration: underline;
+}
+
+.user > .user-name {
+  margin-left: 8px;
+  font-size: 14px;
 }
 
 .navbar > * {
-  margin: 0 20px;
+  margin: 0 10px;
 }
 
 .menu {
@@ -180,17 +205,6 @@ svg {
 
 .dropdown-menu.hide {
   display: none;
-}
-
-.btn-upgrade {
-  border: 1px solid white;
-  border-radius: 10px;
-  height: 25px;
-  width: 100px;
-  background: var(--dark-gray);
-  color: white;
-  font-weight: 700;
-  text-transform: uppercase;
 }
 
 /* Hidden scroll trigger element */
