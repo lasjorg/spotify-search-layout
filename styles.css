@@ -17,6 +17,8 @@ body {
   color: white;
   display: grid;
   height: 100vh;
+  min-width: 340px;
+  overflow-x: hidden;
 }
 
 hr {
@@ -90,6 +92,7 @@ svg {
   padding: 4px 4px 4px 25px;
   border: none;
   outline: none;
+  min-width: 135px;
 }
 
 .search > svg {
@@ -430,17 +433,6 @@ svg {
 }
 
 @media (max-width: 676px) {
-  .header {
-    flex-wrap: wrap;
-  }
-  .search {
-    margin-left: auto;
-  }
-  .navbar {
-    justify-content: space-between;
-    margin: 0;
-    width: 100%;
-  }
   .cover-featured {
     align-items: center;
   }
@@ -450,6 +442,11 @@ svg {
   body {
     font-size: 1rem;
   }
+
+  .btn-upgrade {
+    display: none;
+  }
+
   .cover-featured {
     align-items: center;
   }
