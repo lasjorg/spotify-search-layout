@@ -86,6 +86,7 @@ svg {
 
 .input-search {
   display: block;
+  width: 80%;
   border-radius: 10px;
   padding: 4px 4px 4px 25px;
   border: none;
@@ -96,18 +97,24 @@ svg {
   position: absolute;
   stroke: black;
   fill: none;
-  height: 15px;
-  width: 15px;
+  height: 18px;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .search > .icon-search {
-  left: 4px;
+  left: -8px;
 }
 
 .search > .icon-close {
-  right: 6%;
+  right: 18%;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.icon-close.has-search-text {
+  opacity: 0.2;
+  visibility: visible;
 }
 
 .navbar {

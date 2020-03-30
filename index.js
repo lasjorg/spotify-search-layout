@@ -1,9 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.getElementById('menu-toggle');
   const dropdownMenu = document.getElementById('dropdown-menu');
+
   const topSearchST = document.getElementById('search-results-scroll-trigger');
   const headerST = document.getElementById('header-scroll-trigger');
+
   const header = document.querySelector('.header');
+
+  const searchBox = document.querySelector('.input-search');
+  const closeIcon = document.querySelector('.icon-close');
+
+  searchBox.addEventListener('input', event => {
+    event.target.value
+      ? closeIcon.classList.add('has-search-text')
+      : closeIcon.classList.remove('has-search-text');
+  });
+
+  closeIcon.addEventListener('click', () => {
+    searchBox.value = '';
+    closeIcon.classList.remove('has-search-text');
+  });
 
   menuToggle.addEventListener('click', () => {
     dropdownMenu.classList.toggle('hide');
