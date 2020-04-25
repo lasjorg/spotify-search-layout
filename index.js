@@ -1,16 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const menuToggle = document.getElementById('menu-toggle');
-  const dropdownMenu = document.getElementById('dropdown-menu');
-
-  const topSearchST = document.getElementById('search-results-scroll-trigger');
-  const headerST = document.getElementById('header-scroll-trigger');
-
   const header = document.querySelector('.header');
-
   const searchBox = document.querySelector('.input-search');
   const closeIcon = document.querySelector('.icon-close');
+  const menuToggle = document.getElementById('menu-toggle');
+  const dropdownMenu = document.getElementById('dropdown-menu');
+  const topSearchST = document.getElementById('search-results-scroll-trigger');
 
-  searchBox.addEventListener('input', event => {
+  searchBox.addEventListener('input', (event) => {
     event.target.value
       ? closeIcon.classList.add('has-search-text')
       : closeIcon.classList.remove('has-search-text');
@@ -24,27 +20,18 @@ document.addEventListener('DOMContentLoaded', () => {
   menuToggle.addEventListener('click', () => {
     dropdownMenu.classList.toggle('hide');
   });
-
-  /* IntersectionObserver for giving the header a gradient black when the page
-   * is scrolled down about 20px
-   */
-  const headerObserver = new IntersectionObserver((entries, self) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) {
-        header.classList.add('has-scroll');
-      } else {
-        header.classList.remove('has-scroll');
-      }
-    });
+  // gradual fade to black for header on scroll
+  document.addEventListener('scroll', () => {
+    header.style.backgroundImage = `linear-gradient(to bottom, rgba(0,0,0,${
+      window.pageYOffset / 400
+    }) 30%, transparent 100%)`;
   });
-
-  headerObserver.observe(headerST);
 
   /* IntersectionObserver for making the header solid black when the page
    * is scrolled down to where the header is on top of the search grid element
    */
   const topSearchObserver = new IntersectionObserver((entries, self) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
       if (!entry.isIntersecting) {
         header.classList.add('has-scroll-to-target');
       } else {
